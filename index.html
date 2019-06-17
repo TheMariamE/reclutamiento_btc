@@ -18,6 +18,11 @@
     <!-- Custom styles for this template -->
     <link href="css/landing-page.css" rel="stylesheet">
     <link href="css/prueba.css" rel="stylesheet">
+    <script src = "js/prueba.js"></script>
+    <!--Scripts for Modal-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/respond.js"></script>
 
   </head>
 
@@ -113,12 +118,56 @@
 
           <!-- Por favor borrar este contenido al momento de empezar con su respuesta -->
           <div class="col-md-12 text-left">
-            <div class="ans">
-              <i>Su respuesta aquí, editar en el código de index.html</i>
+              <div id="prueba1">
+                  <h2>SERVICIOS <span class="blue">RESPONSIVE</span></h2> 
+                  <hr>
+                      <article id="contenedor1" class="columna1">
+                          <a href = "https://bluetideconsulting.com/servicios/web/" class="fa fa-link"></a>
+                          <h6>NORMAL LINK</h6>
+                          <p>Alienum phaedrum torquatos nec eu, vis detraxit periculis ex, nihil expetendis in mei. Mei an pericula euripidis.</p>
+                          <a href = "https://bluetideconsulting.com/servicios/web/" class="boton boton1">MAS INFORMACION</a>
+                          <hr>
+                        </article>
+                      <article id="contenedor1" class="columna1">
+                          <a href = "https://bluetideconsulting.com/servicios/web/" class="fa fa-external-link-alt" id="empezar"></a>
+                          <h6>COTIZA LINK</h6>
+                          <p>Alienum phaedrum torquatos nec eu, vis detraxit periculis ex, nihil expetendis in mei. Mei an pericula euripidis.</p>
+                          <a href = "https://bluetideconsulting.com/servicios/web/" class="boton boton2">MAS INFORMACION</a>
+                          <hr>
+                        </article>
+                      <article id="contenedor1" class="columna1">
+                          <a href = "https://bluetideconsulting.com/servicios/web/" target="_blank" class="far fa-window-restore"></a>
+                          <h6>NEW TAB LINK</h6>
+                          <p>Alienum phaedrum torquatos nec eu, vis detraxit periculis ex, nihil expetendis in mei. Mei an pericula euripidis.</p>
+                          <a href = "https://bluetideconsulting.com/servicios/web/" target="_blank" class="boton boton2">MAS INFORMACION</a>
+                          <hr>
+                        </article>
+                      <article id="contenedor1" class="columna1">
+                          <i class="far fa-window-maximize" data-toggle="modal" data-target="#myModal"></i>
+                          <!-- Modal -->
+                          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                  <h4 class="modal-title" id="myModalLabel">MODAL LINK</h4>
+                                </div>
+                                <div class="modal-body">
+                                   <iframe src="https://bluetideconsulting.com/servicios/web/" style="zoom:0.60" frameborder="0" height="800" width="99.6%"></iframe>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <h6>MODAL LINK</h6>
+                          <p>Alienum phaedrum torquatos nec eu, vis detraxit periculis ex, nihil expetendis in mei. Mei an pericula euripidis.</p>
+                          <i class="boton boton4" data-toggle="modal" data-target="#myModal">MAS INFORMACION</i>
+                          <hr>
+                        </article>
+                </div>
             </div>
-          </div>
-          <!-- Borrar hasta aquí -->
-
         </div>
       </div>
     </section>
@@ -159,8 +208,57 @@
 
           <!-- Por favor borrar este contenido al momento de empezar con su respuesta -->
           <div class="col-md-12 text-left">
-            <div class="ans">
-              <i>Su respuesta aquí, editar en el código de index.html</i>
+            <div class="prueba2"id="container">
+                <h2>FORMULARIO DE <span class="blue">CONTACTO</span></h2> 
+                <hr>
+                <div id="container " class="centerBox">
+                    <form action="/action_page.php" name="userRegForm" onsubmit="return validateForm(this);">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                              <label for="inputText1">Nombre</label>
+                              <input type="text" class="form-control" id="inputText1" name="fname" autocomplete="false" required title="First name is required." oninput="return validateRequired(this);" onchange="return validateRequired(this);" required>
+                            </div>
+                            <div class="col-md-6">
+                              <label>Apellidos</label>
+                              <input type="text" class="form-control" id="inputText2" autocomplete="false">
+                            </div>
+                          </div>
+                        <div class="form-row">
+                          <br>
+                          </div> 
+                        <div class="form-row">
+                            <div class="col-md-6">
+                              <label for="inputText3">Telefono</label>
+                              <input type="text" class="form-control" id="inputText3" autocomplete="false">
+                              </div>
+                            <div class="col-md-6">
+                              <label for="inputEmail">Correo Electronico</label>
+                              <input type="email" class="form-control" id="inputEmail" autocomplete="false" required pattern="^.{0,64}$" title="Enter an email address with a maximum of 64 characters." oninput="validateEmail(this);" onchange="validateEmail(this);">
+                              </div>
+                            </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-12">
+                            </div>
+                          </div> 
+                        <div class="form-row">
+                          <div class="form-group col-sm-12">
+                              <label for="inputText4">¿Esta Interesado En?</label>
+                              <input type="text" class="form-control" id="inputText4" autocomplete="false">
+                            </div>
+                          </div>
+                        <div class="form-row">
+                          <div class="form-group col-sm-12">
+                              <label for="comment">Observaciones</label>
+                              <textarea class="form-control" rows="5" id="comment" autocomplete="false"></textarea>
+                            </div>
+                          </div>
+                        <div class="form-row" style="margin-left:62.5%;">
+                            <div class="form-group col-sm-12">
+                              <button type="submit" id ="button2"class="boton2">ENVIAR</button>
+                              </div>
+                            </div>
+                      </form>
+                  </div>
             </div>
           </div>
           <!-- Borrar hasta aquí -->
